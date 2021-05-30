@@ -1,0 +1,29 @@
+{
+  "name": "crowdfundingfake",
+  "version": "1.0.0",
+  "description": "fronted-mentor challenge crowdfunding",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taquion009/crowdfundingfake-challenges.git"
+  },
+  "keywords": [
+    "crowdfunding",
+    "challenges",
+    "frontend",
+    "mentor",
+    "javascript",
+    "html",
+    "css",
+    "vanilla"
+  ],
+  "author": "Rodrigo Milesi <rmilesi009@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taquion009/crowdfundingfake-challenges/issues"
+  },
+  "homepage": "https://github.com/taquion009/crowdfundingfake-challenges#readme"
+}

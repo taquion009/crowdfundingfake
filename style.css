@@ -1,0 +1,720 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --ModerateCyan: hsl(176, 50%, 47%);
+    --DarkCyan: hsl(176, 72%, 28%);
+    --Black: hsl(0, 0%, 0%);
+    --DarkGray: hsl(0, 0%, 48%);
+}
+
+/* acciones */
+
+.visible{
+    display: inline-block;
+}
+.oculto{
+    display: none;
+}
+#oscuro{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, transparent 0%, rgba(0,0,0,0.5046393557422969) 30%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#oscuro2{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0, 0, 0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.contain-colum{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+body{
+    font-family: 'Commissioner', sans-serif;
+    color:var(--Black);
+    font-weight: 400;
+}
+
+
+/* Header */
+
+
+header .header-contain{
+    margin: auto;
+    margin-top: 2rem;
+    padding: 0 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    
+}
+header .header-contain nav button{
+    background:none;
+    border:none;
+    outline: none;
+    cursor: pointer;
+}
+header .header-contain nav ul{
+    text-decoration: none;
+    position: absolute;
+    width: calc(100% - 3rem);
+    height: auto;
+    background-color:white;
+    top: 5rem;
+    left: calc(100% - (100% - 1.5rem));;
+    border-radius: 10px;
+    z-index: 1000;
+}
+header .header-contain nav ul li{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding:1.5rem;
+    border-bottom: thin solid rgb(238, 238, 238);
+}
+header .header-contain nav ul li a{
+    color:var(--Black);
+    text-decoration: none;
+}
+header .header-contain nav ul li a:active{
+    color:var(--Black);
+    text-decoration: none;
+}
+
+header .header-contain nav ul:last-child{
+    border-bottom: none;
+}
+
+header .header-contain nav ul li::marker{
+    content: none;
+}
+header .background-header{
+    width: 100%;
+    height: 300px;
+    background: url(./assets/image-hero-mobile.jpg) center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Main */
+
+main{
+    max-width: 750px;
+    position: relative;
+    background-color:white;
+    margin: 0 auto;
+    margin-top: calc(190px);;
+    width: calc(100% - 3rem);
+    border-radius: 10px;
+}
+main section{
+    border: thin solid rgb(230, 230, 230);
+    border-radius: 10px;
+    padding:1.5rem;
+}
+main section{
+    margin-top: 2rem;
+}
+main:first-child{
+    margin-top: 0;
+}
+main .logo-mastercraft{
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    left: calc(50% - 28px);
+    top: -28px;
+}
+main section h1{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+}
+main section p{
+    text-align: center;
+    font-size: 0.895rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    color:var(--DarkGray);
+    line-height: 1.5rem;
+}
+main section .boton-contain{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 1.5rem;
+}
+main section .boton-contain button{
+    background:none;
+    border:none;
+    outline: none;
+    cursor: pointer;
+}
+main section .boton-contain .button-1:hover{
+    background-color: var(--DarkCyan);
+}
+main section .boton-contain > :nth-child(1){
+    padding: 1rem 0.5rem;
+    min-width: 100px;
+    max-width: 250px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    color:white;
+    border-radius: 50px;
+    background-color: var(--ModerateCyan);
+    margin-right: 0.5rem;
+    
+}
+main section .boton-contain .contain-bookmark{
+    height:56px ;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    background: rgb(243 243 243);
+}
+main section .boton-contain .contain-bookmark span{
+    font-weight: 700;
+    color:#2F2F2F;
+    
+    padding: 0 1rem;
+    font-size: 1rem;
+    display: none;
+}
+main section .boton-contain .contain-bookmark div{
+    width: 56px;
+    height: 56px;
+    background: url("assets/icon-bookmark.svg");
+    display: inline-block;
+}
+main section .boton-contain .contain-bookmark:hover{
+    opacity: 0.5;
+}
+main section .boton-contain .contain-bookmark-active{
+    color: hsl(176, 72%, 28%);
+    background: hsl(176deg, 100%, 97%);
+    opacity: 1;
+}
+main section .boton-contain .contain-bookmark-active > div{
+    background: url("assets/icon-bookmark (2).svg");
+}
+main section .boton-contain .contain-bookmark-active > span{
+    color: hsl(176, 72%, 28%);
+}
+
+main section div ul{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+main section div ul li{
+    text-decoration: none;
+}
+main section div ul li > *{
+    text-decoration: none;
+    display: block;
+}
+
+main section div ul li > b{
+    font-size: 2rem;
+}
+main section div ul li > span{
+    margin-top: 1rem;
+    color:var(--DarkGray);
+    font-size: 0.8rem;
+}
+main section div ul li > hr{
+    margin: 1rem auto;
+    width: 100px;
+    border: none;
+    border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+main section div ul li::marker{
+    content: none;
+}
+main section .contain-bar{
+    width:100%;
+    height: 1rem;
+    border-radius: 50px;
+    margin-top: 2rem;
+    background-color: rgb(238, 238, 238);
+}
+main section .contain-bar > .bar{
+    width:70%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: var(--ModerateCyan);
+}
+
+main .seccion-3 h2{
+    font-size: 1.1rem;
+}
+
+main .seccion-3 p{
+    text-align: inherit;
+}
+
+main .seccion-3 div .article{
+    border: thin solid rgb(195, 195, 195);
+    border-radius: 10px;
+    padding:1rem;
+    margin-top: 1.5rem;
+
+}
+
+main .seccion-3 div .article h3{
+    font-size: 1rem;
+}
+
+main .seccion-3 div .article p{
+    text-align: inherit;
+    margin-top: 2rem;
+}
+
+main .seccion-3 div .article h4{
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 700;
+    color:var(--ModerateCyan)
+}
+
+main .seccion-3 div .article b{
+font-size: 2rem;
+}
+
+main .seccion-3 div .article .contain-preso{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+main .seccion-3 div .article .contain-preso span{
+    font-size: 0.895rem;
+    font-weight: 500;
+    color:var(--DarkGray);
+    line-height: 1.5rem;
+    margin-left: 0.2rem;
+}
+
+main .seccion-3 div .article button{
+    background:none;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    padding: 1rem 0.5rem;
+    min-width: 50px;
+    max-width: 200px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    color:white;
+    border-radius: 50px;
+    background-color: var(--ModerateCyan);
+    margin-right: 0.5rem;
+    margin-top: 1.5rem;
+}
+main .seccion-3 div .article button:hover{
+    background-color: var(--DarkCyan);
+}
+main .seccion-3 div .desible{
+    color:var(--DarkGray);
+    opacity: 0.5;
+}
+
+main .seccion-3 div .desible button{
+    background-color: var(--DarkGray);
+    cursor: no-drop;
+}
+main .seccion-3 div .desible button:hover{
+    background-color: var(--DarkGray);
+}
+
+/* // menu-flotante */
+main .menu-flotante h4{
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+main .menu-flotante > img{
+    position: absolute;
+    top:1rem;
+    left: calc(100% - (1rem + 7px));
+    cursor: pointer;
+}
+main .menu-flotante p{
+    text-align: inherit;
+    font-size: 0.895rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    color: var(--DarkGray);
+    line-height: 1.5rem;
+}
+main .menu-flotante form div{
+    position: relative;
+}
+main .menu-flotante form div input[type="radio"]{
+    display: none;
+}
+main .menu-flotante form div .span-radio{
+    display: inline-block;
+    border: 2px solid #ccc;
+    background: #fff;
+    position: absolute;
+    left: 1.5rem;
+    top: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50px;
+  }
+  main .menu-flotante form div input:checked + .span-radio::before{
+    content: '';
+    border: 2px solid #fff;
+    position: absolute;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: var(--ModerateCyan);
+    border-radius: 50px;
+    top:1.5px;
+    left:1.5px;
+  }
+
+main .menu-flotante form div label .contain-colum2{
+    margin-left: 3rem;
+}
+
+main .menu-flotante .article{
+    border: thin solid rgb(195, 195, 195);
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    display: block;
+}
+main .menu-flotante .label-0 .contain-colum{
+    margin-top: 1rem;
+}
+main .menu-flotante .article h3{
+    font-size: 1rem;
+}
+
+main .menu-flotante .article p{
+    text-align: inherit;
+    margin-top: 2rem;
+}
+
+main .menu-flotante .article h4{
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color:var(--ModerateCyan)
+}
+
+main .menu-flotante .article b{
+font-size: 1rem;
+}
+
+main .menu-flotante .article .contain-preso{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+main .menu-flotante .article .contain-preso span{
+    font-size: 0.895rem;
+    font-weight: 500;
+    color:var(--DarkGray);
+    line-height: 1.5rem;
+    margin-left: 0.2rem;
+}
+
+main .menu-flotante .article button{
+    background:none;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    padding: 1rem 0.5rem;
+    min-width: 50px;
+    max-width: 200px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    color:white;
+    border-radius: 50px;
+    background-color: var(--ModerateCyan);
+    margin-right: 0.5rem;
+    margin-top: 1.5rem;
+}
+main .menu-flotante .article button:hover{
+    background-color: var(--DarkCyan);
+}
+main .menu-flotante .desible{
+    color:var(--DarkGray);
+    opacity: 0.5;
+}
+
+main .menu-flotante .desible button{
+    background-color: var(--DarkGray);
+    cursor: no-drop;
+}
+main .menu-flotante .desible button:hover{
+    background-color: var(--DarkGray);
+}
+
+main .menu-flotante{
+    text-decoration: none;
+    position: absolute;
+    width: 100% ;
+    background-color:white;
+    top: 5rem;
+    border-radius: 10px;
+    z-index: 1000;
+    padding: 1.25rem;
+}
+main .menu-flotante form label > div{
+    padding: 1rem;
+}
+main .menu-flotante form label:hover h3{
+    color:var(--ModerateCyan);
+}
+main .menu-flotante form label:hover ~ .span-radio{
+    border:2px solid var(--ModerateCyan);
+}
+main .menu-flotante form div .label-ver{
+    border:1px solid var(--ModerateCyan)
+}
+main .menu-flotante form div label .prece-section{
+    border-top: 1px solid #c9c9c9;
+    text-align: center;
+    font-size: 0.895rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    color: var(--DarkGray);
+    line-height: 1.5rem;
+}
+main .menu-flotante form div label .prece-section > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+main .menu-flotante form div label .prece-section > div > input{
+    width: 90%;
+    margin-right: 1rem;
+    padding: 1rem 1.75rem;
+    border-radius: 50px;
+    border:none;
+    border:1px solid #c9c9c9;
+    color:black;
+    font-size: 1rem;
+    font-weight: 700;
+}
+main .menu-flotante form div label .prece-section > div > label{
+    border: none;
+    position: absolute;
+    top:-0.75rem;
+    left:1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color:#c9c9c9;
+}
+main .menu-flotante form div label .prece-section > div > input:focus{
+    outline: none;
+}
+main .menu-flotante form div label .prece-section > div > button{
+    margin: 0;
+}
+main .check{
+    text-decoration: none;
+    position: fixed;
+    width: calc(100% - 10vw) ;
+    height: auto;
+    min-height: 25rem;
+    background-color:white;
+    top: calc(50% - 12.5rem);
+    left:5vw;
+    border-radius: 10px;
+    z-index: 1000;
+    padding: 1.25rem;
+    text-align: center;
+}
+main .check p{
+    text-align: center;
+    font-size: 0.895rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    color: var(--DarkGray);
+    line-height: 1.5rem;
+}
+main .check button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1rem 0.5rem;
+    min-width: 50px;
+    max-width: 200px;
+    width: auto;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    border-radius: 50px;
+    background-color: var(--ModerateCyan);
+    margin-right: 0.5rem;
+    margin-top: 1.5rem;
+}
+main .check > *{
+   margin-top:2rem
+}
+
+@media screen and (min-width: 600px) {
+
+
+    .contain-colum{
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header .background-header{
+        background: url(./assets/image-hero-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    header .header-contain nav button{
+        display: none;
+    }
+
+    header .header-contain nav{
+        position: relative;
+        background-color: none;
+    }
+    body header .header-contain nav ul{
+        display: inline-block;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        background-color: transparent;
+        width: auto;
+        text-align: center;
+        top: 0;
+        left: 0;
+        color:white;
+    }  
+    header .header-contain nav ul li{
+        background-color: none;
+        font-weight: 500;
+        font-size: 1rem;
+        padding: 0;
+        padding-left: 1rem;
+        border-bottom: none;
+        
+    } 
+    header .header-contain nav ul li a{
+        color:white;
+    }
+    main section .boton-contain .contain-bookmark div{
+        background: url("assets/icon-bookmark.svg");
+    }
+    main section .boton-contain .contain-bookmark-active > div{
+        background: url("assets/icon-bookmark (2).svg");
+    }
+    main section .boton-contain .contain-bookmark span{
+        display: inline-block;
+    }
+    
+
+    main section div ul{
+        flex-direction: row;
+    }
+    main section div ul li hr{
+        display: none;
+    }
+    
+    main section div ul li{
+        border-left: 1px solid rgb(214, 214, 214);
+        padding: 0 1rem;
+        width: 35%;
+    }
+    main section div ul li:nth-child(1){
+        border:none;
+    }
+    main .menu-flotante form div label div .contain-colum2{
+        justify-content:end;
+        margin-top:1rem;
+    }
+    main .menu-flotante form div label div .contain-colum2 > h4{
+        margin:0;
+        margin-left:1.5rem;
+    }
+    main .menu-flotante form div label div .contain-colum3{
+        position: unset;
+    }
+    main .menu-flotante form div label div .contain-preso{
+        position: absolute;
+        top: 0;
+        left: calc(100% - 5rem);
+    }
+    main .check{
+    max-width:25rem;
+    top: calc(50% - 12.5rem);
+    left:calc(50% - 12.5rem);
+    }
+
+    main .menu-flotante form div label .prece-section{
+    width:100%;
+    
+}
+main .menu-flotante form div label .prece-section > div > *{
+    max-width:9rem;
+}
+main .menu-flotante form div label .prece-section > div > input:focus{
+    border: 1px solid var(--ModerateCyan);
+}
+main .menu-flotante form div label .prece-section > div{
+    width: auto;
+    justify-content:flex-end;
+}
+main .menu-flotante form div label .prece-section h5{
+       position: absolute;
+    top: 2.5rem;
+    font-size:1rem;
+    font-weight: 500;
+}
+
+main .menu-flotante form div label .prece-section > div > label{
+    left: calc(100% - 18rem);
+}
+
+}
